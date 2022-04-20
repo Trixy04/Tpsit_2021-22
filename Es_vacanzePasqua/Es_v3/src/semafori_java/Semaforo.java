@@ -1,3 +1,5 @@
+package semafori_java;
+
 public class Semaforo {
     private int valore;
 

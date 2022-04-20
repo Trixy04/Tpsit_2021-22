@@ -1,3 +1,5 @@
+package semafori_java;
+
 public class Main {
     protected static Contatore buffer = new Contatore(0);
     public static void main(String[] args) {

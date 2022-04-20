@@ -1,3 +1,5 @@
+package semafori_java;
+
 public class ConsumaDato extends Thread{
     Semaforo pieno;
     Semaforo vuoto;
