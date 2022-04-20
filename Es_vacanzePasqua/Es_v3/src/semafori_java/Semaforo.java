@@ -1,34 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package semafori_java;
-
-/**
- *
- * @author Mattia
- */
 public class Semaforo {
-    int valore;
-    
-        public Semaforo(int v){
-            valore = v;
+    private int valore;
+
+    public Semaforo(int v) {
+        valore = v;
+    }
+
+    synchronized public void p() throws InterruptedException {
+        while(valore == 0) {
+            try {
+                wait();
+            } catch (Exception e) {e.printStackTrace();}
         }
-        
-        synchronized public void P(){
-            while(valore == 0){
-                try {
-                    wait();
-                } catch (InterruptedException e) {
-                    //eccezione
-                }
-            }
-            valore--;
-        }//fine P
-        
-        synchronized public void V(){
-            valore++;
-            notify();
-        }
+        valore--;
+    }
+
+    synchronized public void v() {
+        valore++;
+        notify();
+    }
+
+    public int getValore() {
+        return valore;
+    }
 }

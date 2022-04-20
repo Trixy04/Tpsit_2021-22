@@ -1,39 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package semafori_java;
-
-/**
- *
- * @author Mattia
- */
 public class Contatore {
     int valore;
-    int passo;
 
-    public Contatore(int valore, int passo) {
-        this.valore = valore; 
-        this.passo = passo;
-        System.out.println("\nIl contatore è nato e vale " + this.getValore());
+    public Contatore(int valore) {
+        this.valore = valore;
+        System.out.println("Il contatore si è generato, e ha il valore pari a: " + this.getValore());
     }
-
     public int getValore() {
         return valore;
     }
 
-    public int getPasso() {
-        return passo;
-    }
-    
-    void incrementa(){
+    void incrementa(int passo) {
         valore += passo;
     }
-    
-    void decrementa(){
+    void decrementa(int passo) {
         valore -= passo;
     }
-        
-        
+    void uguale(int passo) {
+        valore = passo;
+    }
+    void raddoppia() {
+        valore += valore;
+    }
 }
