@@ -1,6 +1,11 @@
 public class Pista extends Thread{
     double tempo = 0;
     
+    
+    /** 
+     * @param nome
+     */
+    
     public void usaPista(String nome){
 
         System.out.println(nome + " è ENTARTO in pista!");

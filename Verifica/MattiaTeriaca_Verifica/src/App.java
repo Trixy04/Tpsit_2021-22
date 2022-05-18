@@ -1,4 +1,10 @@
 public class App extends Thread{
+    
+    /** 
+     * @param args
+     * @throws Exception
+     */
+    
     public static void main(String[] args) throws Exception {
         
         Semaforo semaforoPista = new Semaforo(4);
